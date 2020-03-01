@@ -28,6 +28,9 @@ public class Movie {
    * @return 할인된 금액
    */
   public Money calculateMovieFee(Screening screening) {
+    if (discountPolicy == null) {
+      return fee;
+    }
     return fee.minus(discountPolicy.calculateDiscountAmount(screening));
   }
 }
