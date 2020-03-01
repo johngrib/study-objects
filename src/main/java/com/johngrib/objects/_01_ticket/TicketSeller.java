@@ -9,7 +9,8 @@ public class TicketSeller {
     this.ticketOffice = ticketOffice;
   }
 
+  /** 티켓을 관람객에게 판매한다. */
   public void sellTo(Audience audience) {
-    ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()));
+    ticketOffice.sellTicketTo(audience);
   }
 }

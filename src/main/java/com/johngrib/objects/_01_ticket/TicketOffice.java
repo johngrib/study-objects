@@ -16,18 +16,22 @@ public class TicketOffice {
   }
 
   /** 판매할 티켓을 꺼내준다. */
-  public Ticket getTicket() {
+  private Ticket getTicket() {
     // 편의상 티켓 컬렉션에서 첫 번째 위치에 저장된 티켓을 리턴한다.
     return tickets.remove(0);
   }
 
   /** 판매 금액을 차감한다. */
-  public void minusAmount(Long amount) {
+  private void minusAmount(Long amount) {
     this.amount -= amount;
   }
 
   /** 판매 금액을 더한다. */
-  public void plusAmount(Long amount) {
+  private void plusAmount(Long amount) {
     this.amount += amount;
+  }
+
+  public void sellTicketTo(Audience audience) {
+    plusAmount(audience.buy(getTicket()));
   }
 }
