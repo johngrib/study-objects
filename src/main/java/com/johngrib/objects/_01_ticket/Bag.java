@@ -1,7 +1,10 @@
 package com.johngrib.objects._01_ticket;
 
+import lombok.Getter;
+
 /** 관람객이 소지품을 보관할 가방. */
 public class Bag {
+  @Getter
   private Long amount;
   private Invitation invitation;
   private Ticket ticket;
