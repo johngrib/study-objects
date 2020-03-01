@@ -6,6 +6,26 @@ public class Bag {
   private Invitation invitation;
   private Ticket ticket;
 
+  /**
+   * 이벤트에 당첨되지 않은 관람객. 초대장이 없다.
+   *
+   * @param amount 현금
+   */
+  public Bag(Long amount) {
+    this.amount = amount;
+  }
+
+  /**
+   * 이벤트에 당첨된 관람객. 현금과 초대장이 있다.
+   *
+   * @param amount     현금
+   * @param invitation 초대장
+   */
+  public Bag(Long amount, Invitation invitation) {
+    this.amount = amount;
+    this.invitation = invitation;
+  }
+
   /** 관람객이 초대장을 갖고 있다면 true 를 리턴한다. */
   public boolean hasInvitation() {
     return invitation != null;
