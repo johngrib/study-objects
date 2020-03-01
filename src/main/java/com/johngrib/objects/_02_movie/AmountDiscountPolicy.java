@@ -5,7 +5,7 @@ package com.johngrib.objects._02_movie;
  * <p>
  * 조건을 만족할 경우 일정 금액을 할인해주는 정책.
  */
-public class AmountDiscountPolicy extends DiscountPolicy {
+public class AmountDiscountPolicy extends DefaultDiscountPolicy {
   /** 할인 요금. */
   private Money discountAmount;
 
