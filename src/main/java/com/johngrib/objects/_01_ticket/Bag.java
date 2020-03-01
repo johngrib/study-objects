@@ -30,7 +30,7 @@ public class Bag {
   }
 
   /** 관람객이 초대장을 갖고 있다면 true 를 리턴한다. */
-  public boolean hasInvitation() {
+  private boolean hasInvitation() {
     return invitation != null;
   }
 
@@ -39,17 +39,28 @@ public class Bag {
     return ticket != null;
   }
 
-  public void setTicket(Ticket ticket) {
+  private void setTicket(Ticket ticket) {
     this.ticket = ticket;
   }
 
   /** 현금을 감소시킨다. */
-  public void minusAmount(Long amount) {
+  private void minusAmount(Long amount) {
     this.amount -= amount;
   }
 
   /** 현금을 증가시킨다. */
-  public void plusAmount(Long amount) {
+  private void plusAmount(Long amount) {
     this.amount += amount;
+  }
+
+  public Long hold(Ticket ticket) {
+    if (hasInvitation()) {
+      setTicket(ticket);
+      return 0L;
+    } else {
+      setTicket(ticket);
+      minusAmount(ticket.getFee());
+      return ticket.getFee();
+    }
   }
 }
