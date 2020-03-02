@@ -1,8 +1,13 @@
 package com.johngrib.objects._02_movie;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 import java.math.BigDecimal;
 
 /** 금액. */
+@EqualsAndHashCode
+@ToString
 public class Money {
   public static final Money ZERO = Money.wons(0);
 
