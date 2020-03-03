@@ -20,3 +20,13 @@
 
 ![image](https://user-images.githubusercontent.com/1855714/75622897-7dd6f080-5be8-11ea-91e1-c900fbac8361.png)
 
+## 챕터 02. 객체지향 프로그래밍
+
+* [학습 코드]( https://github.com/johngrib/study-objects/pull/2 )
+
+![image](https://user-images.githubusercontent.com/1855714/75777683-b9fd8300-5d99-11ea-8e98-77092fedd37e.png)
+
+* [테스트 코드]( https://github.com/johngrib/study-objects/blob/3fbf01fdc801663ed07f9436ddafb09c6db63557/src/test/java/com/johngrib/objects/_02_movie/MovieTest.java )
+
+![image](https://user-images.githubusercontent.com/1855714/75777291-0f856000-5d99-11ea-9b62-7a4c84160f0c.png)
+
