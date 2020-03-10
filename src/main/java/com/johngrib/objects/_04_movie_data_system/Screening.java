@@ -17,6 +17,12 @@ public class Screening {
   @Setter
   private LocalDateTime whenScreened;
 
+  public Screening(Movie movie, int sequence, LocalDateTime whenScreened) {
+    this.movie = movie;
+    this.sequence = sequence;
+    this.whenScreened = whenScreened;
+  }
+
   public Money calculateFee(int audienceCount) {
     switch (movie.getMovieType()) {
       case AMOUNT_DISCOUNT:
