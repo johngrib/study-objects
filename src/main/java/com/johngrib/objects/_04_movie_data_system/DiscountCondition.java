@@ -1,6 +1,7 @@
 package com.johngrib.objects._04_movie_data_system;
 
 import lombok.Getter;
+
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
@@ -11,6 +12,15 @@ public class DiscountCondition {
   private DayOfWeek dayOfWeek;
   private LocalTime startTime;
   private LocalTime endTime;
+
+  public DiscountCondition(
+          DiscountConditionType type, int sequence, DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
+    this.type = type;
+    this.sequence = sequence;
+    this.dayOfWeek = dayOfWeek;
+    this.startTime = startTime;
+    this.endTime = endTime;
+  }
 
   public boolean isDiscountable(DayOfWeek dayOfWeek, LocalTime time) {
     if (type != DiscountConditionType.PERIOD) {
