@@ -1,5 +1,6 @@
 package com.johngrib.objects._04_movie_data_system;
 
+import lombok.Builder;
 import lombok.Getter;
 
 import java.time.DayOfWeek;
@@ -13,8 +14,19 @@ public class DiscountCondition {
   private LocalTime startTime;
   private LocalTime endTime;
 
-  public DiscountCondition(
-          DiscountConditionType type, int sequence, DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
+  public DiscountCondition(DiscountConditionType type, int sequence) {
+    this.type = type;
+    this.sequence = sequence;
+  }
+
+  public DiscountCondition(DiscountConditionType type, DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
+    this.type = type;
+    this.dayOfWeek = dayOfWeek;
+    this.startTime = startTime;
+    this.endTime = endTime;
+  }
+
+  public DiscountCondition(DiscountConditionType type, int sequence, DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
     this.type = type;
     this.sequence = sequence;
     this.dayOfWeek = dayOfWeek;
