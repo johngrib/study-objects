@@ -34,3 +34,13 @@
 
 이 챕터에는 코드 예제가 없다.
 
+## 챕터 04. 설계 품질과 트레이드 오프
+
+* [학습 코드]( https://github.com/johngrib/study-objects/pull/3 )
+
+![image](https://user-images.githubusercontent.com/1855714/76524750-f6be2e00-64ad-11ea-84b3-a799950834da.png)
+
+* [테스트 코드]( https://github.com/johngrib/study-objects/tree/c05c319968cb52f8109e0d3c985de3c9b20769aa/src/test/java/com/johngrib/objects/_04_movie_data_system )
+
+![image](https://user-images.githubusercontent.com/1855714/76524433-697ad980-64ad-11ea-9e99-e3dff162d0d8.png)
+
