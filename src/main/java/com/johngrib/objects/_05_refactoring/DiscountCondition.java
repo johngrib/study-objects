@@ -22,4 +22,21 @@ public class DiscountCondition {
   @Getter
   @Setter
   private LocalTime endTime;
+
+  public boolean isDiscountable(Screening screening) {
+    if (type == DiscountConditionType.PERIOD) {
+      return isSatisfiedByPeriod(screening);
+    }
+    return isSatisfiedBySequence(screening);
+  }
+
+  private boolean isSatisfiedByPeriod(Screening screening) {
+    return screening.getWhenScreened().getDayOfWeek().equals(dayOfWeek)
+            && startTime.isBefore(screening.getWhenScreened().toLocalTime())
+            && endTime.isAfter(screening.getWhenScreened().toLocalTime());
+  }
+
+  private boolean isSatisfiedBySequence(Screening screening) {
+    return sequence == screening.getSequence();
+  }
 }
