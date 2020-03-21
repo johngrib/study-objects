@@ -17,6 +17,7 @@
 * [챕터 03. 역할, 책임, 협력]( #챕터-03-역할-책임-협력 )
 * [챕터 04. 설계 품질과 트레이드 오프]( #챕터-04-설계-품질과-트레이드-오프 )
 * [챕터 05. 책임 할당하기]( #챕터-05-책임-할당하기 )
+    * [리팩토링 - 챕터 04]( #리팩토링---챕터-04 )
 
 ## 챕터 01. 객체, 설계
 
@@ -57,4 +58,10 @@
 * [학습 코드]( https://github.com/johngrib/study-objects/pull/4 )
 
 ![image](https://user-images.githubusercontent.com/1855714/77227293-940e1600-6bc2-11ea-9e40-ce378804cadd.png)
+
+### 리팩토링 - 챕터 04
+
+* [학습 코드]( https://github.com/johngrib/study-objects/pull/5 )
+
+![image](https://user-images.githubusercontent.com/1855714/77227887-c91c6780-6bc6-11ea-97e9-b46c584d4c6e.png)
 
