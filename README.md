@@ -16,6 +16,7 @@
 * [챕터 02. 객체지향 프로그래밍]( #챕터-02-객체지향-프로그래밍 )
 * [챕터 03. 역할, 책임, 협력]( #챕터-03-역할-책임-협력 )
 * [챕터 04. 설계 품질과 트레이드 오프]( #챕터-04-설계-품질과-트레이드-오프 )
+* [챕터 05. 책임 할당하기]( #챕터-05-책임-할당하기 )
 
 ## 챕터 01. 객체, 설계
 
@@ -50,4 +51,10 @@
 * [테스트 코드]( https://github.com/johngrib/study-objects/tree/c05c319968cb52f8109e0d3c985de3c9b20769aa/src/test/java/com/johngrib/objects/_04_movie_data_system )
 
 ![image](https://user-images.githubusercontent.com/1855714/76524433-697ad980-64ad-11ea-9e99-e3dff162d0d8.png)
+
+## 챕터 05. 책임 할당하기
+
+* [학습 코드]( https://github.com/johngrib/study-objects/pull/4 )
+
+![image](https://user-images.githubusercontent.com/1855714/77227293-940e1600-6bc2-11ea-9e40-ce378804cadd.png)
 
