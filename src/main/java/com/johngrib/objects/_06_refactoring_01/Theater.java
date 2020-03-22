@@ -14,6 +14,6 @@ public class Theater {
    * @param audience 관람객
    */
   public void enter(Audience audience) {
-    ticketSeller.setTicket(audience);
+    ticketSeller.sellTo(audience);
   }
 }
