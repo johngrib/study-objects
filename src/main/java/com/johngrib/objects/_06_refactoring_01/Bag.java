@@ -39,8 +39,15 @@ public class Bag {
     return ticket != null;
   }
 
-  public void setTicket(Ticket ticket) {
-    this.ticket = ticket;
+  public Long setTicket(Ticket ticket) {
+    if (hasInvitation()) {
+      this.ticket = ticket;
+      return 0L;
+    } else {
+      this.ticket = ticket;
+      minusAmount(ticket.getFee());
+      return ticket.getFee();
+    }
   }
 
   /** 현금을 감소시킨다. */
