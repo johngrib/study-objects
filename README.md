@@ -18,6 +18,7 @@
 * [챕터 04. 설계 품질과 트레이드 오프]( #챕터-04-설계-품질과-트레이드-오프 )
 * [챕터 05. 책임 할당하기]( #챕터-05-책임-할당하기 )
     * [리팩토링 - 챕터 04]( #리팩토링---챕터-04 )
+* [챕터 06. 메시지와 인터페이스]( #챕터-06-메시지와-인터페이스 )
 
 ## 챕터 01. 객체, 설계
 
@@ -64,4 +65,10 @@
 * [학습 코드]( https://github.com/johngrib/study-objects/pull/5 )
 
 ![image](https://user-images.githubusercontent.com/1855714/77227887-c91c6780-6bc6-11ea-97e9-b46c584d4c6e.png)
+
+## 챕터 06. 메시지와 인터페이스
+
+* [학습 코드]( https://github.com/johngrib/study-objects/pull/6 )
+
+![image]( https://user-images.githubusercontent.com/1855714/77823475-c8dc1900-713e-11ea-969b-a3557af77905.png )
 
