@@ -33,8 +33,12 @@ public class Phone {
     Money result = Money.ZERO;
 
     for (Call call : calls) {
-      result = result.plus(amount.times(call.getDuration().getSeconds() / seconds.getSeconds()));
+      result = result.plus(calculateCallFee(call));
     }
     return result;
+  }
+
+  private Money calculateCallFee(Call call) {
+    return amount.times(call.getDuration().getSeconds() / seconds.getSeconds());
   }
 }
