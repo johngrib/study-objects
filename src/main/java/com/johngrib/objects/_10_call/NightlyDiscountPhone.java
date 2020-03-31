@@ -3,13 +3,11 @@ package com.johngrib.objects._10_call;
 import com.johngrib.objects._02_movie.Money;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 심야 할인 요금제.
  */
-public class NightlyDiscountPhone extends AbstractPhone {
+public class NightlyDiscountPhone extends Phone {
   private static final int LATE_NIGHT_HOUR = 22;
 
   private Money nightlyAmount;

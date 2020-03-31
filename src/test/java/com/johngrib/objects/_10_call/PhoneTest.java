@@ -19,8 +19,8 @@ class PhoneTest {
     @Nested
     @DisplayName("10초에 5원씩 부과되는 요금제에 가입했고")
     class Context_with_10sec_5won_phone {
-      Phone givenPhone() {
-        return new Phone(Money.wons(5), Duration.ofSeconds(10));
+      RegularPhone givenPhone() {
+        return new RegularPhone(Money.wons(5), Duration.ofSeconds(10));
       }
 
       @Nested
