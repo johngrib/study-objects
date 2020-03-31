@@ -16,13 +16,21 @@ public class Phone {
   private Money amount;
   @Getter
   private Duration seconds;
-  /** 전체 통화 목록 */
+  /** 전체 통화 목록. */
   @Getter
   private List<Call> calls = new ArrayList<>();
+  /** 세율. */
+  private double taxRate;
 
   public Phone(Money amount, Duration seconds) {
     this.amount = amount;
     this.seconds = seconds;
+  }
+
+  public Phone(Money amount, Duration seconds, double taxRate) {
+    this.amount = amount;
+    this.seconds = seconds;
+    this.taxRate = taxRate;
   }
 
   public void call(Call call) {
@@ -35,6 +43,6 @@ public class Phone {
     for (Call call : calls) {
       result = result.plus(amount.times(call.getDuration().getSeconds() / seconds.getSeconds()));
     }
-    return result;
+    return result.plus(result.times(taxRate));
   }
 }
