@@ -16,6 +16,13 @@ public class RegularPhone extends Phone {
   private Duration seconds;
 
   public RegularPhone(Money amount, Duration seconds) {
+    super(0);
+    this.amount = amount;
+    this.seconds = seconds;
+  }
+
+  public RegularPhone(Money amount, Duration seconds, double taxRate) {
+    super(taxRate);
     this.amount = amount;
     this.seconds = seconds;
   }
