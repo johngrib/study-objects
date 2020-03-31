@@ -7,6 +7,9 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 일반 요금제.
+ */
 public class Phone {
   /** 단위 요금. */
   @Getter
