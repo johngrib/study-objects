@@ -16,11 +16,19 @@ public class NightlyDiscountPhone {
   private Money regularAmount;
   private Duration seconds;
   private List<Call> calls = new ArrayList<>();
+  private double taxRate;
 
   public NightlyDiscountPhone(Money nightlyAmount, Money regularAmount, Duration seconds) {
     this.nightlyAmount = nightlyAmount;
     this.regularAmount = regularAmount;
     this.seconds = seconds;
+  }
+
+  public NightlyDiscountPhone(Money nightlyAmount, Money regularAmount, Duration seconds, double taxRate) {
+    this.nightlyAmount = nightlyAmount;
+    this.regularAmount = regularAmount;
+    this.seconds = seconds;
+    this.taxRate = taxRate;
   }
 
   public Money calculateFee() {
@@ -35,6 +43,7 @@ public class NightlyDiscountPhone {
                 regularAmount.times(call.getDuration().getSeconds() / seconds.getSeconds()));
       }
     }
-    return result;
+    // 일반 요금제는 plus 를 쓰는데 여기에서는 minus 를 쓴다.
+    return result.minus(result.times(taxRate));
   }
 }
