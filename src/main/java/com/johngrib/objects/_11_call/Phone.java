@@ -26,6 +26,9 @@ public abstract class Phone {
     return result.plus(result.times(taxRate));
   }
 
+  protected Money afterCalculated(Money fee) {
+    return fee;
+  }
+
   abstract protected Money calculateCallFee(Call call);
-  abstract protected Money afterCalculated(Money fee);
 }
