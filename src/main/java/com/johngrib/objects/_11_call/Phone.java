@@ -1,34 +1,26 @@
 package com.johngrib.objects._11_call;
 
 import com.johngrib.objects._02_movie.Money;
-import lombok.Getter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public abstract class Phone {
+public class Phone {
+  private RatePolicy ratePolicy;
 
-  private double taxRate;
   /** 전체 통화 목록 */
-  @Getter
   private List<Call> calls = new ArrayList<>();
 
-  public Phone(double taxRate) {
-    this.taxRate = taxRate;
+  public Phone(RatePolicy ratePolicy) {
+    this.ratePolicy = ratePolicy;
+  }
+
+  public List<Call> getCalls() {
+    return Collections.unmodifiableList(calls);
   }
 
   public Money calculateFee() {
-    Money result = Money.ZERO;
-
-    for (Call call : calls) {
-      result = result.plus(calculateCallFee(call));
-    }
-    return result.plus(result.times(taxRate));
+    return ratePolicy.calculateFee(this);
   }
-
-  protected Money afterCalculated(Money fee) {
-    return fee;
-  }
-
-  abstract protected Money calculateCallFee(Call call);
 }
