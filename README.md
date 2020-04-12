@@ -20,6 +20,7 @@
     * [리팩토링 - 챕터 04]( #리팩토링---챕터-04 )
 * [챕터 06. 메시지와 인터페이스]( #챕터-06-메시지와-인터페이스 )
 * [챕터 10. 상속과 코드 재사용]( #챕터-10-상속과-코드-재사용 )
+* [챕터 11. 합성과 유연한 설계]( #챕터-11-합성과-유연한-설계 )
 
 ## 챕터 01. 객체, 설계
 
@@ -82,4 +83,10 @@
 * [테스트 코드]( https://github.com/johngrib/study-objects/blob/cf3c2dd82ec37f91f5a4f46b0403df69d07555bb/src/test/java/com/johngrib/objects/_10_call/PhoneTest.java )
 
 ![image](https://user-images.githubusercontent.com/1855714/78038094-60dc3b80-73a7-11ea-9d2d-392d2213dd23.png)
+
+## 챕터 11. 합성과 유연한 설계
+
+* [학습 코드]( https://github.com/johngrib/study-objects/pull/8 )
+
+![image](https://user-images.githubusercontent.com/1855714/79059537-22535480-7cb6-11ea-97ee-64f5780a5bb5.png )
 
