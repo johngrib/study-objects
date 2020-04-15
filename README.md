@@ -21,6 +21,7 @@
 * [챕터 06. 메시지와 인터페이스]( #챕터-06-메시지와-인터페이스 )
 * [챕터 10. 상속과 코드 재사용]( #챕터-10-상속과-코드-재사용 )
 * [챕터 11. 합성과 유연한 설계]( #챕터-11-합성과-유연한-설계 )
+* [챕터 12. 다형성]( #챕터-12-다형성 )
 
 ## 챕터 01. 객체, 설계
 
@@ -89,4 +90,14 @@
 * [학습 코드]( https://github.com/johngrib/study-objects/pull/8 )
 
 ![image](https://user-images.githubusercontent.com/1855714/79059537-22535480-7cb6-11ea-97ee-64f5780a5bb5.png )
+
+## 챕터 12. 다형성
+
+* [학습 코드]( https://github.com/johngrib/study-objects/pull/9 )
+
+![image](https://user-images.githubusercontent.com/1855714/79338814-dda01580-7f62-11ea-8606-f2ccb92dcae2.png)
+
+* [테스트 코드]( https://github.com/johngrib/study-objects/pull/9/files#diff-24edaf9135c8c6658af8679293822043 )
+
+![image](https://user-images.githubusercontent.com/1855714/79339072-412a4300-7f63-11ea-9e35-939f80ebbd06.png)
 
