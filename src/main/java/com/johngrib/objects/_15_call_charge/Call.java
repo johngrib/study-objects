@@ -4,6 +4,7 @@ import lombok.Getter;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * 개별 통화 시간.
@@ -26,5 +27,9 @@ public class Call {
 
   public LocalDateTime getTo() {
     return interval.getTo();
+  }
+
+  public List<DateTimeInterval> splitByDay() {
+    return interval.splitByDay();
   }
 }
