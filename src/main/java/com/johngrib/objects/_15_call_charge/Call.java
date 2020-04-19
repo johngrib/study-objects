@@ -10,15 +10,21 @@ import java.time.LocalDateTime;
  */
 public class Call {
   @Getter
-  private LocalDateTime from;
-  private LocalDateTime to;
+  private DateTimeInterval interval;
 
   public Call(LocalDateTime from, LocalDateTime to) {
-    this.from = from;
-    this.to = to;
+    this.interval = DateTimeInterval.of(from, to);
   }
 
   public Duration getDuration() {
-    return Duration.between(from, to);
+    return interval.duration();
+  }
+
+  public LocalDateTime getFrom() {
+    return interval.getFrom();
+  }
+
+  public LocalDateTime getTo() {
+    return interval.getTo();
   }
 }
