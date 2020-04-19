@@ -13,7 +13,6 @@ public class FixedFeePolicy extends BasicRatePolicy {
     this.seconds = seconds;
   }
 
-  @Override
   protected Money calculateCallFee(Call call) {
     return amount.times(call.getDuration().getSeconds() / seconds.getSeconds());
   }

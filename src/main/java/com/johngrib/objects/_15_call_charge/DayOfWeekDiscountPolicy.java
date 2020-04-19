@@ -12,7 +12,6 @@ public class DayOfWeekDiscountPolicy extends BasicRatePolicy {
     this.rules = rules;
   }
 
-  @Override
   protected Money calculateCallFee(Call call) {
     Money result = Money.ZERO;
     for(DateTimeInterval interval : call.getInterval().splitByDay()) {

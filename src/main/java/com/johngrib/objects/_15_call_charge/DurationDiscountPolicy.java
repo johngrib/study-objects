@@ -12,7 +12,6 @@ public class DurationDiscountPolicy extends BasicRatePolicy {
     this.rules = rules;
   }
 
-  @Override
   protected Money calculateCallFee(Call call) {
     Money result = Money.ZERO;
     for (DurationDiscountRule rule : rules) {
