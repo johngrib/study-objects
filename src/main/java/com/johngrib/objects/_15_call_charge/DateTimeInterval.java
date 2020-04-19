@@ -2,10 +2,10 @@ package com.johngrib.objects._15_call_charge;
 
 import lombok.Getter;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Getter
 public class DateTimeInterval {
@@ -41,5 +41,39 @@ public class DateTimeInterval {
 
   public Duration duration() {
     return Duration.between(from, to);
+  }
+
+  public List<DateTimeInterval> splitByDay() {
+    if (days() > 1) {
+      return splitByDay(days());
+    }
+    return Arrays.asList(this);
+  }
+
+  private int days() {
+    return Period.between(from.toLocalDate(), to.toLocalDate())
+            .plusDays(1)
+            .getDays();
+  }
+
+  private List<DateTimeInterval> splitByDay(int days) {
+    List<DateTimeInterval> result = new ArrayList<>();
+    addFirstDay(result);
+    addMiddleDays(result, days);
+    return result;
+  }
+
+  private void addFirstDay(List<DateTimeInterval> result) {
+    result.add(DateTimeInterval.toMidnight(from));
+  }
+
+  private void addMiddleDays(List<DateTimeInterval> result, int days) {
+    for (int loop = 1; loop < days; loop++) {
+      result.add(DateTimeInterval.during(from.toLocalDate().plusDays(loop)));
+    }
+  }
+
+  private void addLastDay(List<DateTimeInterval> result) {
+    result.add(DateTimeInterval.fromMidnight(to));
   }
 }
