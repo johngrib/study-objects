@@ -4,11 +4,11 @@ import com.johngrib.objects._02_movie.Money;
 
 import java.time.Duration;
 
-public class RegularPolicy extends BasicRatePolicy {
+public class FixedFeePolicy extends BasicRatePolicy {
   public Money amount;
   private Duration seconds;
 
-  public RegularPolicy(Money amount, Duration seconds) {
+  public FixedFeePolicy(Money amount, Duration seconds) {
     this.amount = amount;
     this.seconds = seconds;
   }
